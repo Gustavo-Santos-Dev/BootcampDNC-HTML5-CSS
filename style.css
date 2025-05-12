@@ -97,6 +97,7 @@ mark {
 
 /*---------------------------------------------------*/
 
+
 /* FORMULÁRIO ---------------------------------------*/
 form {
     font-weight: 600;
@@ -137,6 +138,7 @@ form input::placeholder {
 
 input[type="checkbox"] {
     transform: scale(1.7);
+    cursor: pointer;
 }
 
 input[type="submit"] {
@@ -162,3 +164,133 @@ input[type="submit"]:hover {
 }
 
 /*---------------------------------------------------*/
+
+/* FOOTER -------------------------------------------*/
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 7rem;
+    width: 100%;
+    background-color: var(--azul-dnc);
+    padding: 3.2rem 5% 4.2rem 5%;
+}
+
+footer .row1 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+}
+
+footer .row1 nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer .row1 nav ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+footer .row1 nav ul li, footer .row1 nav ul li a, footer .row2 a, footer .row2 span {
+    list-style: none;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 2.5rem;
+}
+
+footer ul li a:hover, footer .row2 a:hover {
+    opacity: 0.6;
+}
+
+footer .row1 nav h5 {
+    font-weight: 800;
+    font-size: 2.5rem;
+    background-color: var(--preto-dnc);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+    width: fit-content;
+}
+
+footer .row1 div {
+    display: flex;
+    font-weight: 600;
+    font-size: 2rem;
+    align-items: center;
+}
+
+footer .row2 {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    width: 100%;
+    justify-content: center;
+}
+
+/*---------------------------------------------------*/
+
+/* MEDIA QUERIES ------------------------------------*/
+
+@media only screen and (max-width: 600px) {
+
+    /* MENU DE NAVEGAÇÃO PRINCIPAL -------------------*/
+    #mainNavigationBar {
+        flex-direction: column;
+        padding: 0;
+        height: auto;
+        gap: 1.2rem;
+    }
+
+    #menu {
+        flex-direction: column;
+        width: 100%;
+        gap: 1.2rem;
+    }
+
+    #mainNavigationBar button {
+        width: 100%;
+    }
+
+    /*------------------------------------------------*/
+
+    /* SEÇÃO PRINCIPAL -------------------------------*/
+    section {
+        margin: 8rem 0;
+    }
+
+    header h1 {
+        font-size: 4rem;
+    }
+
+    header h2 {
+        font-size: 2.8rem;
+        padding: 0 1rem;
+        margin: 0 0 9rem 0;
+    }
+
+    /*------------------------------------------------*/
+
+    /* FORMULÁRIO ---------------------------------------*/
+    form {
+        width: 93%;
+        font-size: 2.2rem;
+    }
+
+    form input::placeholder {
+        font-size: 1.8rem;
+    }
+
+    .checkboxItens label {
+        font-size: 1.6rem;
+    }
+
+    input[type="checkbox"] {
+        transform: scale(1.6);
+    }
+    /*---------------------------------------------------*/
+}
